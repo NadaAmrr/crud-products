@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font Awesome Library Icon -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- Bootstrap Stylesheet -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- Media Query Stylesheet -->
+  <link rel="stylesheet" href="css/media.css" />
+  <!-- Animation Stylesheet -->
+  <link rel="stylesheet" href="css/animation.css" />
+</head>
+
+<body>
+  <!-- Add products -->
+  <section class="container">
+    <div class="row py-5">
+      <div class="w-75 mx-auto">
+        <h1>Products</h1>
+        <!-- Product Name -->
+        <input type="text" class="form-control mb-2" name="name" id="productName" placeholder="Product Name"/>
+        <!-- Product Price -->
+        <input type="text" class="form-control mb-2" name="price" id="productPrice" placeholder="Product Price"/>
+        <!-- Product Categary -->
+        <input type="text" class="form-control mb-2"  name="productCategory" id="productCategory" placeholder="Product Categary"/>
+        <!-- Product Description -->
+        <textarea name="" id="productDesc" class="form-control mb-2" cols="20" rows="10" placeholder="Product Description"></textarea>
+        <!-- Buttons -->
+        <button id="btnSubmit" type="submit" onclick="addProduct()" class="btn btn-info my-2 btn-submit">Submit</button>
+        <button type="submit" onclick="clearForm()" class="btn btn-info my-2 btn-reset">Reset</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="table-products px-3" id="table-products">
+    <div class="container">
+      <div class="row justify-content-center align-items-center text-center gap-3">
+        <table class="table table-striped text-center">
+
+          <thead>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Categary</th>
+            <th>Product Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </thead>
+
+          <input type="text" oninput="search(this.value)" class="form-control py-2 mb-2"
+            placeholder="search Product Name" name="name" id="search" />
+
+          <tbody id="displayProducts">
+          </tbody>
+
+        </table>
+      </div>
+      </div>
+        </section>
+  <!-- script -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
